@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launcher icon foreground: 4 dots arranged like motion cue dots on screen edges -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Left column dots -->
+    <path
+        android:fillColor="#E94560"
+        android:pathData="M20,30m-7,0a7,7 0,1 1,14 0a7,7 0,1 1,-14 0" />
+    <path
+        android:fillColor="#E94560"
+        android:pathData="M20,54m-7,0a7,7 0,1 1,14 0a7,7 0,1 1,-14 0" />
+    <path
+        android:fillColor="#E94560"
+        android:pathData="M20,78m-7,0a7,7 0,1 1,14 0a7,7 0,1 1,-14 0" />
+
+    <!-- Right column dots -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M88,30m-7,0a7,7 0,1 1,14 0a7,7 0,1 1,-14 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M88,54m-7,0a7,7 0,1 1,14 0a7,7 0,1 1,-14 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M88,78m-7,0a7,7 0,1 1,14 0a7,7 0,1 1,-14 0" />
+
+</vector>

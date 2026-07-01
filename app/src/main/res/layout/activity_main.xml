@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".ui.MainActivity">
+
+    <!-- App bar with material toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:elevation="4dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Widget.MotionCues.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            app:title="@string/app_name"
+            app:titleTextAppearance="@style/TextAppearance.MotionCues.CardTitle" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Scrollable content area -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/screen_padding"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <!-- ───── Card 1: Overlay Control ───── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardOverlayControl"
+                style="@style/Widget.MotionCues.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_title_overlay_control"
+                        style="@style/TextAppearance.MotionCues.CardTitle" />
+
+                    <TextView
+                        android:id="@+id/tvOverlayStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_spacing_small"
+                        android:text="@string/status_inactive"
+                        android:textColor="@color/status_inactive"
+                        android:textSize="@dimen/text_body" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/item_spacing_medium">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnStartOverlay"
+                            style="@style/Widget.MotionCues.Button.Primary"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/button_height"
+                            android:layout_weight="1"
+                            android:text="@string/btn_start_overlay" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnStopOverlay"
+                            style="@style/Widget.MotionCues.Button.Outlined"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/button_height"
+                            android:layout_weight="1"
+                            android:layout_marginStart="@dimen/item_spacing_small"
+                            android:enabled="false"
+                            android:text="@string/btn_stop_overlay" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ───── Card 2: Sensor Info ───── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSensorInfo"
+                style="@style/Widget.MotionCues.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_title_sensor_info"
+                        style="@style/TextAppearance.MotionCues.CardTitle" />
+
+                    <TextView
+                        android:id="@+id/tvSensorStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_spacing_small"
+                        android:textColor="@color/colorOnSurface"
+                        android:textSize="@dimen/text_body"
+                        tools:text="Accelerometer: Available\nGyroscope: Available" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCalibrate"
+                        style="@style/Widget.MotionCues.Button.Outlined"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginTop="@dimen/item_spacing_medium"
+                        android:text="@string/btn_calibrate" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ───── Card 3: Appearance ───── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAppearance"
+                style="@style/Widget.MotionCues.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_title_appearance"
+                        style="@style/TextAppearance.MotionCues.CardTitle" />
+
+                    <!-- Dot Size -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_spacing_medium"
+                        android:text="@string/label_dot_size"
+                        android:textColor="@color/colorOnSurface"
+                        android:textSize="@dimen/text_body" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/sliderDotSize"
+                        style="@style/Widget.MotionCues.Slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/slider_margin_horizontal"
+                        android:valueFrom="4"
+                        android:valueTo="20"
+                        android:stepSize="1"
+                        android:value="8" />
+
+                    <!-- Dot Opacity -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_spacing_small"
+                        android:text="@string/label_dot_alpha"
+                        android:textColor="@color/colorOnSurface"
+                        android:textSize="@dimen/text_body" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/sliderAlpha"
+                        style="@style/Widget.MotionCues.Slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/slider_margin_horizontal"
+                        android:valueFrom="50"
+                        android:valueTo="255"
+                        android:stepSize="5"
+                        android:value="180" />
+
+                    <!-- Color picker -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnColorPicker"
+                        style="@style/Widget.MotionCues.Button.Outlined"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginTop="@dimen/item_spacing_medium"
+                        android:text="@string/btn_pick_color" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ───── Card 4: Motion Sensitivity ───── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMotion"
+                style="@style/Widget.MotionCues.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_title_motion"
+                        style="@style/TextAppearance.MotionCues.CardTitle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_spacing_medium"
+                        android:text="@string/label_sensitivity"
+                        android:textColor="@color/colorOnSurface"
+                        android:textSize="@dimen/text_body" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/sliderSensitivity"
+                        style="@style/Widget.MotionCues.Slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/slider_margin_horizontal"
+                        android:valueFrom="0.1"
+                        android:valueTo="5.0"
+                        android:stepSize="0.1"
+                        android:value="1.2" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

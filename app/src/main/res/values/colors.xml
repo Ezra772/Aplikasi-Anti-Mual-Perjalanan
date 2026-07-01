@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand palette — deep indigo primary with electric accent -->
+    <color name="colorPrimary">#1A1A2E</color>
+    <color name="colorPrimaryVariant">#16213E</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+
+    <color name="colorSecondary">#0F3460</color>
+    <color name="colorSecondaryVariant">#533483</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+
+    <!-- Electric accent used for active elements -->
+    <color name="colorAccent">#E94560</color>
+
+    <!-- Background -->
+    <color name="colorBackground">#0D0D1A</color>
+    <color name="colorSurface">#1A1A2E</color>
+    <color name="colorOnBackground">#E0E0FF</color>
+    <color name="colorOnSurface">#C0C0E0</color>
+
+    <!-- Card background -->
+    <color name="colorCard">#1E1E3A</color>
+    <color name="colorCardStroke">#2A2A50</color>
+
+    <!-- Overlay status colors -->
+    <color name="status_active">#4CAF50</color>
+    <color name="status_inactive">#9E9E9E</color>
+    <color name="status_warning">#FF9800</color>
+
+    <!-- Dot defaults -->
+    <color name="dot_default_color">#FFFFFF</color>
+</resources>

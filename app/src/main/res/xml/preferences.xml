@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Motion Sensitivity: 1–10 (mapped to 0.1–1.0 inside OverlayPreferences) -->
+    <SeekBarPreference
+        android:key="sensitivity"
+        android:title="@string/pref_title_sensitivity"
+        android:summary="@string/pref_summary_sensitivity"
+        android:min="1"
+        android:max="10"
+        android:defaultValue="5"
+        app:showSeekBarValue="true" />
+
+    <!-- Dot Size in dp: 4–20, default 8 -->
+    <SeekBarPreference
+        android:key="dot_size"
+        android:title="@string/pref_title_dot_size"
+        android:summary="@string/pref_summary_dot_size"
+        android:min="4"
+        android:max="20"
+        android:defaultValue="8"
+        app:showSeekBarValue="true" />
+
+    <!-- Dot Opacity: 50–255, default 180 -->
+    <SeekBarPreference
+        android:key="dot_alpha"
+        android:title="@string/pref_title_dot_alpha"
+        android:summary="@string/pref_summary_dot_alpha"
+        android:min="50"
+        android:max="255"
+        android:defaultValue="180"
+        app:showSeekBarValue="true" />
+
+</PreferenceScreen>
